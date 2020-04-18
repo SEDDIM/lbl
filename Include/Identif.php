@@ -44,15 +44,16 @@ switch ($_REQUEST['session']){
         $id = $_REQUEST['txtNom'];
         
         $compteValide = valideInfosCompteUtilisateur(existeCompteVisiteur($id),$id,$mdpEmpreinte);
-       
+      
         if ($compteValide==1)
-        {ouvreSessionUtilisateur($id);
-         
+        {
+            ouvreSessionUtilisateur($id);
+
         header("location: index.php?action=5"); 
       
         } else {
         
-        require_once 'Include/entete2.inc.php';
+        require_once 'Include/entete.inc.php';
         echo '<form id="frmIdentification" method="post" action="Index.php?action=1&session=5">' ;
         echo '<fieldset>'
         . '<legend>Identifiez-vous</legend>'."\n";

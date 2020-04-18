@@ -2,21 +2,6 @@
 
 
 
-function formImageDepuisRecordset ($type, $id, $name, $recordset){
-    
-    $CodeHTML = '<input>' .$type;
-    $CodeHTML .= 'input id = "' . $id . '"name = "' . $name . '">';
-    $recordset->setFetchMode(PDO::FETCH_NUM);
-    $ligne = $recordset->fetch();
-
-    while ($ligne == true) {
-        $CodeHTML .= '<option value="' . $ligne[0] . '">' . $ligne[1] . ' </option>';
-        $ligne = $recordset->fetch();
-    }
-}
-
-
-//<input type="file" id="file" name="file" multiple>
 function formCategoriesDepuisRecordset($label, $name, $size, $recordset) {
 
     $CodeHTML = '<label>' . $label;
@@ -113,7 +98,18 @@ function BoutonChangementPage($name, $action, $value) {
             . '<input type="submit" value="' . $value . '"></form>';
     return $codeHtml;
 }
+function formInputTextreadonly($label, $name, $id, $value, $tabindex, $readonly, $max, $size) {
 
+    $codeHTML = '<label for="' . $name . '">' . $label . '</label>' . "\n"
+            . '<input type="text" value="' . $value . '" size="' . $size . '" maxlength="'
+            . $max . '" name="' . $name . '" id="' . $id . '" tabindex="' . $tabindex . '" ';
+          if($readonly==true){ 
+              $codeHTML .=  'readonly="readonly">';             
+          } else {
+              $codeHTML .=  '>';       
+          }
+    return $codeHTML;
+}
 function formInputText($label, $name, $id, $value, $tabindex, $required, $max, $size) {
 
     $codeHTML = '<label for="' . $name . '">' . $label . '</label>' . "\n"

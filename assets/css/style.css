@@ -175,7 +175,7 @@ p {
     clear: both;
 }
 
-img {
+img {    margin: 7px;
     max-width: 100%;
 }
 textarea,
@@ -195,6 +195,7 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
     outline: none;
+ 
 }
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
@@ -225,8 +226,19 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 55em;
+    width: 56em;
+    height: 211px;
 }
+  #image-produit{
+                    width: 150px;
+                    height: 150px;
+                    padding-left: 25px;
+                    padding-top: 25px;
+                } 
+                #NomPrix{
+                    margin-top: -150px;
+                    margin-right: 340px;
+                }
 #AnnonceCorrespondante{
         text-align: center;
 }
@@ -252,25 +264,31 @@ h6 {
 h1 {
     font-size: 3rem;
     line-height: 4rem;
+         
 }
 h2 {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
 }
 h3 {
     font-size: 1.500rem;
     line-height: 2rem;
+
 }
 h4 {
     font-size: 1.6rem;
     line-height: 2.2rem;
+   
 }
 h5 {
     font-size: 1.125rem;
-    line-height: 1.575rem
+    line-height: 1.575rem;
+             
 }
 h6 {
     font-size: 1rem;
+           
 }
 
 
@@ -1326,4 +1344,14 @@ nav.navbar.bootsnav.footer-menu ul li a:hover{
 .scrollup:hover {
     background-color: blueviolet;
     color:#fff;
+}
+
+#info-annonce{
+WIDTH: 400px;
+
+}
+
+.imageproduit{
+    width: 100px;
+    height: 100px;
 }

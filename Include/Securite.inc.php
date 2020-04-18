@@ -1,10 +1,13 @@
 <?php 
-require_once 'Modele\Modele1.php';
+require_once 'C:\wamp\www\LBL\Modele\Modele1.php';
+   
  
- 
-function  fermeSessionUtilisateur(){
- session_destroy();
- unset($_SESSION['EMAIL']);
+function  fermeSessionUtilisateur()
+{session_start();
+$_SESSION = array();
+session_destroy();           
+
+
 }
 
 function estSessionUtilisateurOuverte($o) 
@@ -17,11 +20,8 @@ function estSessionUtilisateurOuverte($o)
 
 function ouvreSessionUtilisateur($id)
         {
-          session_start();
-            $_SESSION['EMAIL'] = $id ; 
-            
-        
-        }
+        $_SESSION['EMAIL'] = $id ; 
+}
             
             
       

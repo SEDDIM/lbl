@@ -1,5 +1,5 @@
 <?php
-    require_once 'Include\Bibliotheque.php';
+    require_once '/../Include\Bibliotheque.php';
     
         echo '<div class="Recherche">';
         echo '<form id="frmRecherche" method="post" action="index.php?action=1&Gestion=3">';

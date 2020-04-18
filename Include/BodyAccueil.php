@@ -5,9 +5,12 @@
                     <div class="main_home">
                         <div class="col-md-6">
                             <div class="home_text">
+                          
                                 <h1 class="text-white">Vente et Location entre particuliers.</h1>
                             </div>
-                            <?php require_once 'Vue/VueRechercher.php'; ?>
+                            <?php
+                    
+                            require_once '/../Vue/VueRechercher.php'; ?>
                             <div class="home_btns m-top-40">
                                 <a href="index.php?Gestion=4" class="btn btn-danger m-top-20">Inscription</a>
                                 <a href="index.php?action=1&Gestion=5&Connexion=3" class="btn btn-primary m-top-20">Connexion</a>
@@ -25,10 +28,9 @@
         </section> <!--End off Home Sections-->
 
        <?php
-for ($i=0;$i<30;$i++)
-{
-echo '<br>';
-}
+
+$allannonce = true ;
+require_once '/../Vue/VueAffichageAnnonce.php';
        
      ?>
 
@@ -48,14 +50,14 @@ echo '<br>';
                                     entes et utiles.</h5>
 
                                 <div class="download_app m-top-30">
-                                    <a href=""><img src="assets/images/appstor.png" alt="" /></a>
-                                    <a href=""><img src="assets/images/googleplay.png" alt="" /></a>
+                                    <a href=""><img src="/./LBL/assets/images/appstor.png" alt="" /></a>
+                                    <a href=""><img src="/./LBL/assets/images/googleplay.png" alt="" /></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="download_item m-top-70">
-                                <img class="app_right" src="assets/images/appdownload1.png" alt="" />
+                                <img class="app_right" src="/./LBL/assets/images/appdownload1.png" alt="" />
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,231 @@
+#container {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#slider-1 {
+    width: 400px;
+    height: 400px;
+    top: 25px;
+}
+
+#slider-2 {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    width: 150px;
+    height: 250px;
+    left:450px;
+}
+
+.slides {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+/*! Flickity v1.0.2
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+    position: relative;
+}
+
+.flickity-enabled:focus { outline: none; }
+
+.flickity-viewport {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.flickity-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+.gallery-cell {
+    width: 100%;
+}
+
+.btn-next {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 20px;  
+    width: 60px;
+    height: 20px;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    svg {
+        display: block;
+        width: 60px;
+        height: 20px;
+
+        #arrow-line {
+            transition: all 0.3s ease-out;
+            transform-origin: right bottom;
+        }
+    }
+
+    &:hover {
+        svg {
+            #arrow-line {
+                transform: scaleX(1.5);
+            }
+        }
+    }
+}
+
+#info-annonce{
+    WIDTH: 400px;
+}    
+h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: normal;
+}p {
+    line-height: 1.5rem;
+    width: 200px;
+}
+p:last-child {
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 10px
+}
+
+#message_annonce{
+    background-color: #d8d0d0;
+    width: 200px;
+    padding: 15px;
+    border-radius: 9px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+#PremierMsj
+{
+    background-color: #0a83ffe6;
+    width: 200px;
+    padding: 15px;
+    border-radius: 9px;
+    margin-left: 104px;
+}
+
+
+div#Haut .div{
+    display: inline-block;
+    padding-bottom: 15px;  
+}
+div#Haut div.avatar-date{
+    display: inline-block;
+    padding-right: 16px;
+
+}
+div#Haut div.nom-annonce{
+    display: inline-block;
+
+}
+textarea,
+input[type="text"],
+.uneditable-input {
+    outline: none;
+    margin-left: 11px;
+    width: 250px;
+
+}
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: 7px;
+}
+div#GestionMessage {
+  padding-left: 15px;
+    margin-top: -28px;
+}
+div#LigneMessage{
+     border: 1px solid grey;
+         height: 65px;
+}
+div#Message-box{
+         height: 65px;
+}
+div#Message-box div.avatar-date{
+    display: inline-block;
+}
+div#Message-box div.nom_annonce{
+    display: inline-block;
+}
+div#GestionMessage div.Gauche{
+    display: inline-block;
+WIDTH: 280px;
+
+  border: 1px solid grey;
+
+}
+#Gauche{
+  background-color: beige;
+
+
+}
+div#GestionMessage div.Droite{
+      display: inline-block;    white-space:normal; vertical-align:top;
+
+
+      
+
+}
+
+div#LigneMessage div.avatar-date{
+    display: inline-block;
+
+
+}
+div#LigneMessage div.nom-annonce{
+    display: inline-block;
+
+}

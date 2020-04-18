@@ -1,8 +1,7 @@
 
 <?php
-require_once 'Include\Bibliotheque.php';
+require '/../Include/Bibliotheque.php';
 
-require_once 'Include/Securite.inc.php';
 
 if (!isset($_REQUEST['Connexion'])) {
     $_REQUEST['Connexion'] = 2;
@@ -10,15 +9,15 @@ if (!isset($_REQUEST['Connexion'])) {
 switch    ($_REQUEST['Connexion']) {
 
     case 2 :
-        echo BoutonChangementPage("Connexion", "index.php?action=1&Gestion=1&Connexion=3", "Connexion");
+        echo BoutonChangementPage("Connexion", "index.php?action=1&Gestion=5&Connexion=3", "Connexion");
         break;
 
     case 3;
         for ($i=0;$i<10;$i++)
 {
         echo '<br>';
-}         echo '<div class="Connexion">';
-        echo '<form id="frmIdentification" method="post" action="index.php?action=1&Gestion=1&Connexion=4">';
+}         echo '<div id="Connexion">';
+        echo '<form id="frmIdentification" method="post" action="\LBL\Vue\VueBtnConnection.php?Connexion=4">';
         echo '<fieldset>'
         . '<legend>Identifiez-vous</legend>' . "\n";
         echo formInputText1('Nom d\'utilisateur : ', 'txtNom', 'txtNom', '', 10, false, 30, 40);
@@ -34,7 +33,7 @@ switch    ($_REQUEST['Connexion']) {
         break;
 
     case 4; //demande validation des infos
-
+        require_once '/../Include/Securite.inc.php';
         $mdp = $_REQUEST['Password'];
         $mdpEmpreinte = md5($mdp);
         $id = $_REQUEST['txtNom'];
@@ -42,12 +41,11 @@ switch    ($_REQUEST['Connexion']) {
         $compteValide = valideInfosCompteUtilisateur(existeCompteVisiteur($id), $id, $mdpEmpreinte);
 
         if ($compteValide == 1) {
-            ouvreSessionUtilisateur($id);
-
-            header("Location: index.php?action=1&Gestion=4");
+           header('Location:PageAccueil.php?id='.$id);   
+           die();
         } else {
 
-            echo '<form id="frmIdentification" method="post" action="Index.php?action=1&Connexion=4">';
+            echo '<form id="frmIdentification" method="post" action="\LBL\Vue\VueBtnConnection.php?Connexion=4">';
             echo '<fieldset>'
             . '<legend>Identifiez-vous</legend>' . "\n";
 
@@ -63,9 +61,10 @@ switch    ($_REQUEST['Connexion']) {
             echo '</fieldset>';
             echo '</form>';
         }
-        break
-        ;
-       
+        break;
+    case 5; 
+        echo 'Connexion etablie pour ' . $_SESSION['EMAIL'];
+       break;
 
 }
 ?>
